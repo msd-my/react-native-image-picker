@@ -132,7 +132,7 @@ public class ImagePickerModule extends ReactContextBaseJavaModule implements Act
         boolean isVideo = this.options.mediaType.equals(mediaTypeVideo);
 
         if(isSingleSelect && (isPhoto || isVideo)) {
-            libraryIntent = new Intent(Intent.ACTION_PICK);
+            libraryIntent = new Intent(Intent.ACTION_GET_CONTENT);
         } else {
             libraryIntent = new Intent(Intent.ACTION_GET_CONTENT);
             libraryIntent.addCategory(Intent.CATEGORY_OPENABLE);
