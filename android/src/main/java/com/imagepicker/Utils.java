@@ -443,6 +443,7 @@ public class Utils {
 
         for(int i = 0; i < fileUris.size(); ++i) {
             Uri uri = fileUris.get(i);
+            uri=Uri.parse(uri.toString().replace("#",Uri.encode("#")))
 
             if (isImageType(uri, context)) {
                 if (uri.getScheme().contains("content")) {
