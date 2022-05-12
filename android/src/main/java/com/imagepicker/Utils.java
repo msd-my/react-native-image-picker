@@ -420,7 +420,7 @@ public class Utils {
         WritableMap map = Arguments.createMap();
         VideoMetadata videoMetadata = new VideoMetadata(uri, context);
 
-        map.putString("uri", uri.toString());
+        map.putString("uri", FilePathUtils.getAbsolutePath(context, uri));
         map.putDouble("fileSize", getFileSize(uri, context));
         map.putInt("duration", videoMetadata.getDuration());
         map.putInt("bitrate", videoMetadata.getBitrate());
